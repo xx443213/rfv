@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>Send SMS or Auth</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body {
+            width: 400px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f7f7f7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #statusMessage {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            display: none;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button id="logout" class="hide">Log Out</button>
+
+
+    <div id="auth">
+        <!-- Sign Up Form -->
+        <div id="signupForm" class="form-section active">
+            <input type="text" id="signupUsername" placeholder="Enter username" />
+            <input type="email" id="signupEmail" placeholder="Enter email" />
+            <input type="password" id="signupPassword" placeholder="Enter password" />
+            <button id="signup">Sign Up</button>
+        </div>
+        <!-- Sign In Form -->
+        <div id="signinForm" class="form-section">
+            <input type="text" id="signinUsername" placeholder="Enter username" />
+            <input type="password" id="signinPassword" placeholder="Enter password" />
+            <button id="signin">Sign In</button>
+        </div>
+        <!-- Toggle Button -->
+        <button id="toggleForm">Switch to Sign In</button>
+    </div>
+    <div id="smsSection" class="hide">
+        <input type="text" id="phoneNumber" placeholder="Enter phone number" />
+        <input type="text" id="message" placeholder="Enter your message" />
+        <button id="send">Send SMS</button>
+    </div>
+    <div id="statusMessage"></div>
+</body>
+</html>

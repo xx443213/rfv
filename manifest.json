@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Twilio SMS Extension",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/INO_Logo.png",
+      "48": "images/INO_Logo.png",
+      "128": "images/INO_Logo.png"
+    }
+  },
+  "icons": {
+    "16": "images/INO_Logo.png",
+    "48": "images/INO_Logo.png",
+    "128": "images/INO_Logo.png"
+  }
+}
